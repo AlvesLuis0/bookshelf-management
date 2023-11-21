@@ -31,6 +31,9 @@ public class BookService {
   }
 
   public Book updateByID(BookDTO book, Integer id) {
+    if(!bookRepository.existsById(id)) {
+      throw new BookNotFoundException(id);
+    }
     checkPublicationYear(book.publicationYear());
     Book updatedBook = new Book();
     BeanUtils.copyProperties(book, updatedBook);
