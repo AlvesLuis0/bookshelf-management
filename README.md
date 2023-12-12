@@ -12,6 +12,7 @@ REST API for managing books on a *"virtual bookshelf"*
     * [✋ Prerequisites](#✋-prerequisites)
     * [🚀 Runnning](#🚀-running)
   * [🛠 Technologies](#🛠-technologies)
+  * [🔖 Learnings](#🔖-learnings)
 
 ## 📝 Features
 
@@ -35,17 +36,31 @@ Furthermore, it is good to have an editor to work with the code like [VSCode](ht
 
 ### 🚀 Running
 
-Configure the environment variables: **DB_URL**, **DB_USERNAME** and **DB_PASSWORD** in your editor
-
 ```bash
 # Clone this repository
-$ git clone https://github.com/alvesluis0/bookshelf-management
+git clone https://github.com/alvesluis0/bookshelf-management
 
 # Access the project folder in terminal/cmd
-$ cd bookshelf-management
+cd bookshelf-management
 
-# Run the application
-$ mvn spring-boot:run
+# Create a database and at the root of the project create a .env file with the following information:
+DB_URL=your_database_url
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+# For example
+DB_URL=postgresql://localhost:5432/bookshelf_management
+DB_USERNAME=alves
+DB_PASSWORD=my_strong_password
+
+# Install the application on Linux
+bash manager.sh install
+# Install the application on Windows(Powershell)
+.\manager.ps1 install
+
+# Run the application on Linux
+bash manager.sh run
+# Run the application on Windows(Powershell)
+.\manager.ps1 run
 
 # The server will start on port:8080 - access <http://localhost:8080/swagger-ui.html> to test
 ```
@@ -58,3 +73,10 @@ The following tools were used to build the project:
 - [Maven](https://maven.apache.org/)
 - [Spring Boot](https://spring.io/)
 - [Postgres](https://www.postgresql.org/)
+
+## 🔖 Learnings
+
+- Connection to the Postgres database
+- Document API with Swagger
+- Management of environment variables
+- Create Bash and Powershell scripts
