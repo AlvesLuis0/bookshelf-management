@@ -4,16 +4,6 @@
 
 REST API for managing books on a *"virtual bookshelf"*
 
-## Table of Contents
-
-  * [📝 Features](#📝-features)
-  * [👾 Demo](#👾-demo)
-  * [❓ How to Use](#❓-how-to-use)
-    * [✋ Prerequisites](#✋-prerequisites)
-    * [🚀 Runnning](#🚀-running)
-  * [🛠 Technologies](#🛠-technologies)
-  * [🔖 Learnings](#🔖-learnings)
-
 ## 📝 Features
 
 - [x] Display the list of books on the bookshelf
