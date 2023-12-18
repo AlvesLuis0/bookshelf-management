@@ -33,24 +33,16 @@ git clone https://github.com/alvesluis0/bookshelf-management
 # Access the project folder in terminal/cmd
 cd bookshelf-management
 
-# Create a database and at the root of the project create a .env file with the following information:
-DB_URL=your_database_url
-DB_USERNAME=your_database_username
-DB_PASSWORD=your_database_password
-# For example
-DB_URL=postgresql://localhost:5432/bookshelf_management
-DB_USERNAME=alves
-DB_PASSWORD=my_strong_password
+# Create a database and configure the application.properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/bookshelf_management
+spring.datasource.username=postgres
+spring.datasource.password=postgres
 
-# Install the application on Linux
-bash manager.sh install
-# Install the application on Windows(Powershell)
-.\manager.ps1 install
+# Install the application
+mvn package -DskipTests
 
-# Run the application on Linux
-bash manager.sh run
-# Run the application on Windows(Powershell)
-.\manager.ps1 run
+# Run the application
+java -jar target/bookshelf-management-1.0.0.jar
 
 # The server will start on port:8080 - access <http://localhost:8080/swagger-ui.html> to test
 ```
@@ -68,5 +60,3 @@ The following tools were used to build the project:
 
 - Connection to the Postgres database
 - Document API with Swagger
-- Management of environment variables
-- Create Bash and Powershell scripts
