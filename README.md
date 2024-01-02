@@ -1,6 +1,6 @@
 ![Bookshelf Banner](.github/banner.jpg)
 
-# 📚 Bookshelf Management
+# 📚 Bookshelf Management API
 
 REST API for managing books on a *"virtual bookshelf"*
 
@@ -34,15 +34,15 @@ git clone https://github.com/alvesluis0/bookshelf-management
 cd bookshelf-management
 
 # Create a database and configure the application.properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/bookshelf_management
+spring.datasource.url=jdbc:postgresql://localhost:5432/bookshelf_management_api
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 
 # Install the application
-mvn package -DskipTests
+mvn package
 
 # Run the application
-java -jar target/bookshelf-management-1.0.0.jar
+java -jar target/bookshelf-management-api.jar
 
 # The server will start on port:8080 - access <http://localhost:8080/swagger-ui.html> to test
 ```
