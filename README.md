@@ -28,7 +28,7 @@ Furthermore, it is good to have an editor to work with the code like [VSCode](ht
 
 ```bash
 # Clone this repository
-git clone https://github.com/alvesluis0/bookshelf-management
+git clone https://github.com/alvesluis0/bookshelf-management-api
 
 # Access the project folder in terminal/cmd
 cd bookshelf-management
